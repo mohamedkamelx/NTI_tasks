@@ -35,6 +35,8 @@ function main(){
             alert('invalid operation')
             continue         
         }
+
+        
         let arr =[]
         for (let i=0;i<3;i++){
             let n = Number(prompt(`enter value ${i}`))

@@ -2,8 +2,7 @@ function check(txt,c){
     len = txt.length;
     for (let i=0;i < len; i++){
         if (typeof txt[i] !=='string'){
-            alert('invalid')
-            return
+            return 'invalid must be string'
         }
         if (c){
             if (txt[i] !==txt[len-i-1])

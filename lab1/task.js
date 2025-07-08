@@ -1,11 +1,17 @@
-function sum(arr){
-    let sum = 0
-    for (let i = 0;i <arr.length; i++){
-        if (typeof arr[i] == 'number'){
-            sum += arr[i];
+function sum(){
+    let s = 0
+    n = prompt('enter length of array');
+    for (let i = 0;i <n; i++){
+        x = Number(prompt(`enter number ${i+1}`));
+        if (isNaN(n)){
+            alert("must be numbers");
+            i--;            
+        }else{
+            s += x;
+
         }
     }
-    return sum
+    return s
 }
 
-console.log(sum([1,2,3,55,'4']))
+alert(sum());
