@@ -1,0 +1,51 @@
+POST http://127.0.0.1:8000/api/users/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "john",
+  "password": "123456"
+
+}
+
+
+###
+
+GET http://127.0.0.1:8000/api/users/ HTTP/1.1
+
+
+###
+PATCH http://127.0.0.1:8000/api/users/6878aef99c0288128e2602b3 HTTP/1.1
+Content-Type: application/json
+
+{
+  "username": "ali"
+}
+
+
+
+###
+
+
+POST http://127.0.0.1:8000/api/posts/ HTTP/1.1
+Content-Type: application/json
+
+{
+  "userId":"6878aef99c0288128e2602b3",
+  "title":"ali first post",
+  "body":"make a social media webapp"
+}
+
+
+###
+GET http://127.0.0.1:8000/api/posts/6878bb78bad31032922cc1fe HTTP/1.1
+
+
+
+
+###
+
+GET http://127.0.0.1:8000/api/posts/ HTTP/1.1
+
+
+###
+GET http://127.0.0.1:8000/api/posts/user-posts/ali HTTP/1.1

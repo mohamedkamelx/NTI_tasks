@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts List</title>
+</head>
+<body>
+  <h1>Posts</h1>
+  <ul id="postsList"></ul>
+
+  <script>
+    fetch("http://127.0.0.1:8000/api/posts")
+      .then(response => response.json())
+      .then(data => {
+        const list = document.getElementById("postsList");
+        data.forEach(post => {
+          const li = document.createElement("li");
+          li.textContent = `Post: ${post.title}, ID: ${post._id}, user:${post.userId.username}, title: ${post.title}`;
+          const li2 = document.createElement("li");
+          li2.textContent = `body ${post.body}`;
+          list.appendChild(li);
+          list.appendChild(li2);
+        });
+      })
+      .catch(error => console.error("Error fetching users:", error));
+  </script>
+</body>
+</html>
